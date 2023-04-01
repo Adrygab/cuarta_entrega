@@ -1,0 +1,112 @@
+header{
+    position:fixed;
+    width: 100%;
+    left:0px;
+    top:0px;
+    @include contFlex(flex, column, center, center, 0px, 0px);
+    background-color: $bg-terciario;
+    z-index: 30;
+    height: 100%;
+    @include tablet{
+        position:static;
+        height: auto;
+        @include contFlex(inline-block, row, center, center, 0px, 0px);
+    }
+    @include mobile{
+        position:static;
+        height: auto;
+        @include contFlex(inline-block, row, center, center, 0px, 0px);
+    }
+
+   nav{
+    .animaLogo{
+      @extend %hoverAnimado;
+      &:hover{
+        @extend %rotateLogo;
+       
+      }  
+    }
+    .navbar-toggler-icon{
+        background-image:url(../img/menu.png);
+    }
+    .menuVer{
+      @include contFlex(flex, column, center, center, 0px, 0px);
+      @include tablet{
+        @include contFlex(flex, row, center, center, 0px, 0px);
+    }
+    @include mobile{
+        @include contFlex(flex, row, center, center, 0px, 0px);
+    }
+    }
+    img{
+        max-width: 90%;
+        @include mobile{
+            max-width: 70%;
+        }
+    }
+    .nav-link{
+        color: #ffffff;
+        @include mobile{
+            font-size: 20px;
+          }
+        @extend %hoverAnimado;
+        @include mobile{
+          font-size: 20px;
+        }
+    }
+    .active{
+        color:$bg-principal;
+        font-weight: bold;
+            }
+    .nav-link{
+    &:hover{
+       color:$bg-principal;
+       font-size: 18px;
+       font-weight: bold; 
+    }
+    }
+    .telefono{
+        width: map-get($botones, btn-width-sm);
+        @extend %btns;
+        @include tablet {
+            margin: 0;
+        }
+        @include mobile {
+            margin: 0;
+            width: map-get($botones, btn-width-lg);
+        }
+       
+        a{
+            @extend %btna;
+        &:hover{
+          width: map-get($botones, btn-width-sm2);
+          text-shadow: map-get($botones, btn-text-shadow);
+          color: $bg-fondo;
+        }
+       } 
+        
+    }
+
+    .WhatsAppBtn{
+        width: 50px;
+        height: 50px;
+        margin: 10px auto;
+        transform: scale(100%);
+        @extend %hoverAnimado;
+        &:hover{
+            transform: scale(130%);
+           }
+        @include tablet{
+            margin: 10px 0;
+        }
+        @include mobile{
+            margin: 10px 0;
+        }
+     }
+
+   }
+    
+   }
+
+
+

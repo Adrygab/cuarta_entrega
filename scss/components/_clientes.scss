@@ -1,0 +1,74 @@
+
+/*Clientes*/
+.contenido{
+    @extend %contenido;
+
+    .sliderClientes {
+      @extend %slider;
+        @include imgSlider(url(../img/clientes/slide_clientes.jpg), center left, 110%);
+        @include mobile{
+          @include imgSlider(url(../img/clientes/slide_clientes.jpg), top center, 150%);
+          
+        }
+        
+        .sliderCliente{
+           
+            @include colSlider(relative, rgba($bg-terciario, 0.7), 0px, 300px); 
+            left:0px;
+           
+            @include mobile{
+                @include colSlider(static, rgba($bg-terciario, 1), 250px 0 0 0, 200px); 
+       
+               }
+               h1{
+              
+                
+                @extend %h1;
+               .TitInt{
+                
+                  @include TitInterior(1.2em, $bg-fondo, 0.5em);
+                  } 
+                .TitInt2{
+                 @include TitInterior(2.5em, $bg-principal, 0.5em);
+              }
+            }
+            .infoContactame{
+             @include info(30px, 60%);
+             @include mobile{
+                 @include info(20px, 80%); 
+                }  
+             }
+            p.capitalLetter:first-letter{
+               @extend %capital-letter;
+              }
+ 
+         } 
+      }
+
+      .clienteGallery{
+        @extend %grid;
+        @include galeriaGrid(repeat(3, 1fr ), repeat (4, 1fr ));
+        img{
+          margin: auto;
+          &:hover{
+            transform: scale(1.1);
+            transition: $transition;
+          }
+          @include mobile{
+            width: 150px;
+          }
+        }
+        
+        @include tablet{
+          @include galeriaGrid(repeat(2, 1fr ), repeat (1, 1fr ));
+          }
+          @include mobile{
+            @include galeriaGrid(repeat(2, 1fr ), repeat (1, 1fr ));
+           
+          }
+
+}
+  
+}
+    
+
