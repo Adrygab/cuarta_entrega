@@ -147,7 +147,7 @@
               color: $bg-principal;
             } 
             @include mobile{
-              padding: 50px 10px; 
+              padding: 10px 10px; 
               
             } 
           }
@@ -275,11 +275,15 @@
 
 
               .gridCont{
+                @include mobile{
+                  margin-top: 100px;
+                }
                 img{
                   max-width: 80%;
                   @include mobile{
                     max-width: 100%;
                   }
+
                 }
                 .add{
                     max-width: 40%;
@@ -296,6 +300,9 @@
                 .banner1{
                   display: map-get($visible, visible);
                   @include tablet{
+                    display: map-get($visible, invisible);
+                  }
+                  @include mobile{
                     display: map-get($visible, invisible);
                   }
                  }

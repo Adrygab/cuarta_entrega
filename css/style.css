@@ -715,7 +715,7 @@ body .ContGral {
 }
 @media screen and (max-width: 570px) {
   .contenido .flip-card-back {
-    padding: 50px 10px;
+    padding: 10px 10px;
   }
 }
 .contenido .btnPortafolio {
@@ -850,6 +850,11 @@ body .ContGral {
   gap: 20px;
   margin: 50px;
 }
+@media screen and (max-width: 570px) {
+  .contenido #screen_full_transparent .gridCont {
+    margin-top: 100px;
+  }
+}
 .contenido #screen_full_transparent .gridCont img {
   max-width: 80%;
 }
@@ -873,6 +878,11 @@ body .ContGral {
   display: block;
 }
 @media screen and (max-width: 768px) {
+  .contenido #screen_full_transparent .gridCont .banner1 {
+    display: none;
+  }
+}
+@media screen and (max-width: 570px) {
   .contenido #screen_full_transparent .gridCont .banner1 {
     display: none;
   }
