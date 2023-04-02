@@ -93,14 +93,14 @@
           .medida{
             height: map-get($medida, height1);
             @include mobile{
-              height: map-get($medida, height1);
+              height: map-get($medida, height2);
             }
           }
           .medidaBan{
             
             height: map-get($medida, height2);
             @include mobile{
-              height: map-get($medida, height3);
+              height: map-get($medida, height4);
             }
           }
 

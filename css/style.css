@@ -663,7 +663,7 @@ body .ContGral {
 }
 @media screen and (max-width: 570px) {
   .contenido .medida {
-    height: 187px;
+    height: 250px;
   }
 }
 .contenido .medidaBan {
@@ -671,7 +671,7 @@ body .ContGral {
 }
 @media screen and (max-width: 570px) {
   .contenido .medidaBan {
-    height: 236px;
+    height: 270px;
   }
 }
 .contenido .medidaSacom {
